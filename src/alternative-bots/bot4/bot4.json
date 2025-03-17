@@ -1,0 +1,16 @@
+{
+  "name": "bot4",
+  "version": "1.0",
+  "authors": [
+    "Adli",
+    "Rau",
+    "Juan"
+  ],
+  "description": "Robot Pemenang",
+  "homepage": "https://trich.id",
+  "countryCodes": [
+    "id"
+  ],
+  "platform": ".Net 6.0",
+  "programmingLang": "C# 10.0"
+}
