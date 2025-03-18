@@ -1,14 +1,14 @@
 using Robocode.TankRoyale.BotApi;
 using Robocode.TankRoyale.BotApi.Events;
 
-public class bot3 : Bot
+public class Bot3 : Bot
 {
     static void Main(string[] args)
     {
-        new bot3().Start();
+        new Bot3().Start();
     }
 
-    bot3() : base(BotInfo.FromFile("bot3.json")) { }
+    Bot3() : base(BotInfo.FromFile("Bot3.json")) { }
 
     public override void Run()
     {
