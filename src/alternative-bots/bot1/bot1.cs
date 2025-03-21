@@ -1,11 +1,15 @@
 using System;
+using System.Drawing;
+using System.Drawing.Text;
 using System.Security.Cryptography.X509Certificates;
+using System.Threading;
 using Robocode.TankRoyale.BotApi;
 using Robocode.TankRoyale.BotApi.Events;
 
 public class Bot1 : Bot
 {
-    private bool OnCorner = false;
+    int turnDirection = 1;
+    bool lockedIn = false;
     static void Main(string[] args)
     {
         new Bot1().Start();
@@ -15,50 +19,94 @@ public class Bot1 : Bot
 
     public override void Run()
     {
+        BodyColor = Color.FromArgb(0xFF, 0x14, 0x93);   // Deep Pink  
+        TurretColor = Color.FromArgb(0xFF, 0xFF, 0x00); // Yellow (Gun)  
+        RadarColor = Color.FromArgb(0xFF, 0x69, 0xB4);  // Hot Pink  
+        BulletColor = Color.FromArgb(0xFF, 0xC0, 0xCB); // Light Pink  
+        ScanColor = Color.FromArgb(0xFF, 0x77, 0x88);   // Pinkish Rose  
+        lockedIn = false;
+
         while (IsRunning)
         {
-            if (!OnCorner) GoToCorner();
-            else {
-                Moving();
-                Scanning();
+            if (EnemyCount < 4) lockedIn = true;
+
+            if (lockedIn) {
+                TurnLeft(5 * turnDirection);
+            }
+            else
+            {
+                SetTurnLeft(10_000);
+                MaxSpeed = 5;
+                Forward(10_000);
             }
         }
     }
 
-    private void GoToCorner()
-    {
-        int X_target = ArenaWidth - 50;
-        int Y_target = ArenaHeight - 50;
-
-        if (Util.GetDistance(this, X_target, Y_target) < 50) {
-            OnCorner = true;
-            return;
-        }
-
-        double Dir = DirectionTo(X_target, Y_target);
-    }
-
-    private void Moving()
-    {
-        Forward(100);
-        SetTurnRight(90);
-    }
-
-    private void Scanning()
-    {
-        SetTurnRadarRight(45);
-    }
-
     public override void OnScannedBot(ScannedBotEvent e)
     {
-        Fire(1);
+        if (!lockedIn) {
+            Fire(3);
+            return;
+        }
+        TurnToFaceTarget(e.X, e.Y);
+        var distance = DistanceTo(e.X, e.Y);
+        Forward(distance + 5);
+
+        Rescan();
+    }
+
+    public override void OnHitBot(HitBotEvent e)
+    {
+        if (!lockedIn) {
+            var bearing = BearingTo(e.X, e.Y);
+            if (bearing > -10 && bearing < 10)
+            {
+                Fire(3);
+            }
+            if (e.IsRammed)
+            {
+                TurnLeft(10);
+            }
+            return;
+        }
+        TurnToFaceTarget(e.X, e.Y);
+
+        if (e.Energy > 16)
+            Fire(3);
+        else if (e.Energy > 10)
+            Fire(2);
+        else if (e.Energy > 4)
+            Fire(1);
+        else if (e.Energy > 2)
+            Fire(.5);
+        else if (e.Energy > .4)
+            Fire(.1);
+
+        Forward(40);
+    }
+
+    private void TurnToFaceTarget(double x, double y)
+    {
+        var bearing = BearingTo(x, y);
+        if (bearing >= 0)
+            turnDirection = 1;
+        else
+            turnDirection = -1;
+
+        TurnLeft(bearing);
     }
 }
-
-public class Util
+public class TurnCompleteCondition : Condition
 {
-    public static Double GetDistance(Bot bot, Double x, Double y)
+    private readonly Bot bot;
+
+    public TurnCompleteCondition(Bot bot)
     {
-        return Math.Sqrt(Math.Pow(bot.X - x, 2) + Math.Pow(bot.Y - y, 2));
+        this.bot = bot;
+    }
+
+    public override bool Test()
+    {
+        return bot.TurnRemaining == 0;
     }
 }
