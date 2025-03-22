@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Adli\\Desktop\\ilegil\\semester 6\\stima\\Tubes1-LagiLagiJuaranya\\src\\alternative-bots\\Bot1\\Bot1.csproj": {}
+    "C:\\Users\\Adli\\Desktop\\ilegil\\semester 6\\stima\\Tubes1-LagiLagiJuaranya\\src\\alternative-bots\\bot1\\Bot1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Adli\\Desktop\\ilegil\\semester 6\\stima\\Tubes1-LagiLagiJuaranya\\src\\alternative-bots\\Bot1\\Bot1.csproj": {
+    "C:\\Users\\Adli\\Desktop\\ilegil\\semester 6\\stima\\Tubes1-LagiLagiJuaranya\\src\\alternative-bots\\bot1\\Bot1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adli\\Desktop\\ilegil\\semester 6\\stima\\Tubes1-LagiLagiJuaranya\\src\\alternative-bots\\Bot1\\Bot1.csproj",
+        "projectUniqueName": "C:\\Users\\Adli\\Desktop\\ilegil\\semester 6\\stima\\Tubes1-LagiLagiJuaranya\\src\\alternative-bots\\bot1\\Bot1.csproj",
         "projectName": "Bot1",
-        "projectPath": "C:\\Users\\Adli\\Desktop\\ilegil\\semester 6\\stima\\Tubes1-LagiLagiJuaranya\\src\\alternative-bots\\Bot1\\Bot1.csproj",
+        "projectPath": "C:\\Users\\Adli\\Desktop\\ilegil\\semester 6\\stima\\Tubes1-LagiLagiJuaranya\\src\\alternative-bots\\bot1\\Bot1.csproj",
         "packagesPath": "C:\\Users\\Adli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adli\\Desktop\\ilegil\\semester 6\\stima\\Tubes1-LagiLagiJuaranya\\src\\alternative-bots\\Bot1\\obj\\",
+        "outputPath": "C:\\Users\\Adli\\Desktop\\ilegil\\semester 6\\stima\\Tubes1-LagiLagiJuaranya\\src\\alternative-bots\\bot1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

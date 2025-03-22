@@ -13,6 +13,7 @@ public class Bot2 : Bot
 
     bool peek;
     double moveAmount;
+    bool backToNormal = false;
     static void Main(string[] args)
     {
         new Bot2().Start();
@@ -39,10 +40,11 @@ public class Bot2 : Bot
 
         while (IsRunning)
         {
-            if (EnemyCount < 4) lockedIn = true;
+            if (EnemyCount < 3) lockedIn = true;
 
             if (lockedIn) {
-                TurnGunToFront();
+                if (!backToNormal)
+                    TurnGunToFront();
                 TurnLeft(5 * turnDirection);
             }
             else
@@ -107,8 +109,8 @@ public class Bot2 : Bot
 
     private void TurnGunToFront()
     {
-        double angle = CalcDeltaAngle(GunDirection, Direction);
-        TurnGunLeft(angle);
+        TurnGunLeft(90);
+        backToNormal = true;
     }
 }
 public class TurnCompleteCondition : Condition

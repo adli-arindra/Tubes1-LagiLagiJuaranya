@@ -28,16 +28,16 @@ public class Bot1 : Bot
 
         while (IsRunning)
         {
-            if (EnemyCount < 4) lockedIn = true;
+            if (EnemyCount < 2) lockedIn = true;
 
             if (lockedIn) {
                 TurnLeft(5 * turnDirection);
             }
             else
             {
-                SetTurnLeft(10_000);
+                SetTurnLeft(10000);
                 MaxSpeed = 5;
-                Forward(10_000);
+                Forward(10000);
             }
         }
     }
@@ -82,7 +82,7 @@ public class Bot1 : Bot
         else if (e.Energy > .4)
             Fire(.1);
 
-        Forward(40);
+        Forward(10);
     }
 
     private void TurnToFaceTarget(double x, double y)

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Corners")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+322c9fafb77a4814446ef4b3f580c3c1e93d719a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71277949beb4eee9e43a85a48456e241a7db63c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Corners")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Corners")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
