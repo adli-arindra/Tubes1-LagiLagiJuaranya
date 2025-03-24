@@ -1,0 +1,14 @@
+{
+  "name": "SimpleMan",
+  "version": "1.0",
+  "authors": [
+    "JuanSign"
+  ],
+  "description": "Hidup dibikin simpel aja.",
+  "homepage": "",
+  "countryCodes": [
+    "id"
+  ],
+  "platform": ".Net 8.0",
+  "programmingLang": "C# 10.0"
+}

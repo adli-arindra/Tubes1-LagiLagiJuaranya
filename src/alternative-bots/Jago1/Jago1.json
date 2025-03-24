@@ -1,0 +1,14 @@
+{
+  "name": "Jago1",
+  "version": "1.0",
+  "authors": [
+    "JuanSign"
+  ],
+  "description": "Jago(an), will track and hunt you down.",
+  "homepage": "",
+  "countryCodes": [
+    "id"
+  ],
+  "platform": ".Net 8.0",
+  "programmingLang": "C# 10.0"
+}
