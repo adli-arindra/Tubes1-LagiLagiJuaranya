@@ -30,7 +30,8 @@ public class Bot1 : Bot
         {
             if (EnemyCount < 2) lockedIn = true;
 
-            if (lockedIn) {
+            if (lockedIn)
+            {
                 TurnLeft(5 * turnDirection);
             }
             else
@@ -44,7 +45,8 @@ public class Bot1 : Bot
 
     public override void OnScannedBot(ScannedBotEvent e)
     {
-        if (!lockedIn) {
+        if (!lockedIn)
+        {
             Fire(3);
             return;
         }
@@ -57,7 +59,8 @@ public class Bot1 : Bot
 
     public override void OnHitBot(HitBotEvent e)
     {
-        if (!lockedIn) {
+        if (!lockedIn)
+        {
             var bearing = BearingTo(e.X, e.Y);
             if (bearing > -10 && bearing < 10)
             {
