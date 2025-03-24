@@ -1,32 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Ariel\\Kuliah\\MatKul\\Tingkat-3\\Asisten Stima\\ExploreTubes2\\sample-bots-csharp-0.30.0\\Fire\\Fire.csproj": {}
+    "C:\\Users\\juans\\work\\project\\Template_Tubes1_STIMA\\sample-bots-csharp-0.30.0\\Fire\\Fire.csproj": {}
   },
   "projects": {
-    "C:\\Ariel\\Kuliah\\MatKul\\Tingkat-3\\Asisten Stima\\ExploreTubes2\\sample-bots-csharp-0.30.0\\Fire\\Fire.csproj": {
+    "C:\\Users\\juans\\work\\project\\Template_Tubes1_STIMA\\sample-bots-csharp-0.30.0\\Fire\\Fire.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Ariel\\Kuliah\\MatKul\\Tingkat-3\\Asisten Stima\\ExploreTubes2\\sample-bots-csharp-0.30.0\\Fire\\Fire.csproj",
+        "projectUniqueName": "C:\\Users\\juans\\work\\project\\Template_Tubes1_STIMA\\sample-bots-csharp-0.30.0\\Fire\\Fire.csproj",
         "projectName": "Fire",
-        "projectPath": "C:\\Ariel\\Kuliah\\MatKul\\Tingkat-3\\Asisten Stima\\ExploreTubes2\\sample-bots-csharp-0.30.0\\Fire\\Fire.csproj",
-        "packagesPath": "C:\\Users\\ariel\\.nuget\\packages\\",
-        "outputPath": "C:\\Ariel\\Kuliah\\MatKul\\Tingkat-3\\Asisten Stima\\ExploreTubes2\\sample-bots-csharp-0.30.0\\Fire\\obj\\",
+        "projectPath": "C:\\Users\\juans\\work\\project\\Template_Tubes1_STIMA\\sample-bots-csharp-0.30.0\\Fire\\Fire.csproj",
+        "packagesPath": "C:\\Users\\juans\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\juans\\work\\project\\Template_Tubes1_STIMA\\sample-bots-csharp-0.30.0\\Fire\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ariel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\juans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -42,8 +47,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
@@ -70,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.309\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
